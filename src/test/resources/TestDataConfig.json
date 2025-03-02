@@ -1,0 +1,40 @@
+{
+  "excelFilePath": "src/test/resources/TestData.xlsx",
+  "excelSheetName": "Clone Data",
+  "dataStartRow": 1,
+  "columns": [
+    {
+      "name": "TEST_NO",
+      "position": 0
+    },
+    {
+      "name": "CLIENT_NAME_SEARCH",
+      "position": 1
+    },
+    {
+      "name": "CLIENT_NAME_SEARCH_INDEX_NO",
+      "position": 2
+    },
+    {
+      "name": "ENG_YEAR_SEARCH",
+      "position": 3
+    },
+    {
+      "name": "ENG_NAME_SEARCH",
+      "position": 4
+    },
+    {
+      "name": "ENG_NAME_SEARCH_INDEX_NO",
+      "position": 5
+    },
+    {
+      "name": "CLONE_ENG_YEAR",
+      "position": 6
+    },
+    {
+      "name": "STATUS",
+      "position": 7
+    }
+  ],
+  "readColumnIds": [0,1,2,3,4,5,6]
+}
