@@ -9,7 +9,8 @@
     <packaging>jar</packaging>
 
     <name>Excel DataProvider Utils</name>
-    <description>Provide Data provider object array by reading excel file and allow to update values in excel cell</description>
+    <description>Provide Data provider object array by reading excel file and allow to update values in excel cell
+    </description>
     <url>https://github.com/ChintanShahX/ExcelUtils</url>
 
     <licenses>
@@ -59,21 +60,42 @@
         </dependency>
     </dependencies>
 
-    <!-- Plugin to include dependencies in the final JAR -->
     <build>
         <plugins>
+            <!-- GPG Signing Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.3.0</version>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
                 <executions>
                     <execution>
-                        <phase>package</phase>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
                         <goals>
-                            <goal>shade</goal>
+                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Deploy Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+            </plugin>
+
+            <!-- Nexus Staging Plugin -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
         </plugins>
     </build>
