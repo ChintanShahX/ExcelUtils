@@ -3,10 +3,42 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.example</groupId>
+    <groupId>io.github.chintanshahx</groupId>
     <artifactId>ExcelUtils</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Excel DataProvider Utils</name>
+    <description>Provide Data provider object array by reading excel file and allow to update values in excel cell</description>
+    <url>https://github.com/ChintanShahX/ExcelUtils</url>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://opensource.org/licenses/Apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>chintanshahx</id>
+            <name>Chintan Shah</name>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/ChintanShahX/ExcelUtils.git</connection>
+        <developerConnection>scm:git:ssh://github.com/ChintanShahX/ExcelUtils.git</developerConnection>
+        <url>https://github.com/ChintanShahX/ExcelUtils</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
